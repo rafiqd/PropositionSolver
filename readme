@@ -1,0 +1,29 @@
+author: Rafiq Dandoo
+Symbols:
+  &  = And
+  |  = Or
+  -  = Not
+  -> = Implication
+  =  = Biconditional Implication
+
+Operator precedence is (Wikipeida says the last three are different on compilers so
+I just want to make it explicit what the program is expecting)
+1: Not
+2: And
+3: Or
+4: Implication
+5: Biconditional Implication
+
+Statements must be on separate lines
+Example:
+p->r
+s->t
+a & b
+
+Are considered 3 different statements and valid by the program
+a&b p->r s->t
+is considered invalid by the program because it looks at it as one statement
+
+Program takes two arguments:
+  Argument 1 is the hypothesis file -- the hypothesis file can be empty
+  Argument 2 is the goals file
